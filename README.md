@@ -19,7 +19,7 @@ Inicia el servidor de desarrollo:
 ```bash
 npm run dev
 ```
-> El proyecto estará disponible en http://localhost:3000.
+> El proyecto estará disponible en http://localhost:3000/Prueba_Tecnica_Libro o http://localhost:3000/Prueba_Tecnica_Libro/login
 
 ## Arquitectura y Decisiones de Diseño
 La arquitectura del proyecto se basa en los principios de Nuxt 3 y Pinia, enfocándose en la modularidad y la escalabilidad:
