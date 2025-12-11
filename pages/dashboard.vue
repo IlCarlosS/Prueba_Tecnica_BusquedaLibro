@@ -79,11 +79,20 @@ const handleSearch = () => {
   <div>
     <h1 class="text-3xl font-bold mb-6 text-gray-800">Búsqueda de Libros</h1>
 
-    <div class="flex justify-between items-center mb-6 p-4 bg-white shadow rounded-lg">
-        <p class="text-m text-gray-600">Bienvenido: <span class="font-medium text-indigo-600">{{ authStore.email }}</span></p>
-        <button @click="handleLogout" class="flex justify-center py-2 px-4 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 disabled:opacity-50">
-          <svg class="h-5 w-5 mr-2 icon icon-tabler icons-tabler-outline icon-tabler-logout-2" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M10 8v-2a2 2 0 0 1 2 -2h7a2 2 0 0 1 2 2v12a2 2 0 0 1 -2 2h-7a2 2 0 0 1 -2 -2v-2" /><path d="M15 12h-12l3 -3" /><path d="M6 15l-3 -3" /></svg>
-          Cerrar Sesión</button>
+    <div class="flex flex-col md:flex-row justify-between items-start md:items-center mb-6 p-4 bg-white shadow rounded-lg space-y-4 md:space-y-0">
+        
+        <p class="text-sm text-gray-600">
+            Bienvenido: 
+            <span class="font-medium text-indigo-600 break-all">{{ authStore.email }}</span>
+        </p>
+        
+        <button 
+            @click="handleLogout" 
+            class="flex justify-center py-2 px-4 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 disabled:opacity-50 w-full md:w-auto"
+        >
+            <svg class="h-5 w-5 mr-2 icon icon-tabler icons-tabler-outline icon-tabler-logout-2" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M10 8v-2a2 2 0 0 1 2 -2h7a2 2 0 0 1 2 2v12a2 2 0 0 1 -2 2h-7a2 2 0 0 1 -2 -2v-2" /><path d="M15 12h-12l3 -3" /><path d="M6 15l-3 -3" /></svg>
+            Cerrar Sesión
+        </button>
     </div>
 
     <BooksFiltersPanel @search="handleSearch" class="mb-8" /> 
